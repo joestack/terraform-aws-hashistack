@@ -75,7 +75,7 @@ variable "organization" {
 //VAULT SETTINGS
 
 variable "vault_enabled" {
-  default = "false"
+  description = "true or false"
 }
 
 variable "vault_version" {
@@ -97,7 +97,7 @@ variable "vault_tls_enabled" {
 //CONSUL SETTINGS
 
 variable "consul_enabled" {
-  default = "false"
+  description = "true or false"
 }
 
 variable "consul_version" {
@@ -120,7 +120,7 @@ variable "consul_tls_enabled" {
 //NOMAD SETTINGS
 
 variable "nomad_enabled" {
-  default = "false"
+  description = "true or false"
 }
 
 variable "nomad_version" {
@@ -146,9 +146,9 @@ variable "region" {
 }
 
 variable "client" {
-  description = "enable nomad client option?"
-  default     = "true"
+  description = "enable nomad client option [true|false]?"
 }
+
 variable "client_count" {
   description = "amount of nomad clients?"
   default     = "3"
@@ -161,7 +161,7 @@ variable "client_name" {
 // TERRAFORM
 
 variable "terraform_enabled" {
-  default = "false"
+  description = "true or false"
 }
 
 variable "tfe_airgapped" {
