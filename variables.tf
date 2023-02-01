@@ -1,16 +1,16 @@
 //GLOBAL CLUSTER SETTINGS
 
-variable "vault_username" {
-  description = "Username to checkout AWS Provider credentials from Vault"
-}
+# variable "vault_username" {
+#   description = "Username to checkout AWS Provider credentials from Vault"
+# }
 
-variable "vault_password" {
-  description = "Password to checkout credentials"
-}
+# variable "vault_password" {
+#   description = "Password to checkout credentials"
+# }
 
-variable "namespace" {
-  default = "admin"
-}
+# variable "namespace" {
+#   default = "admin"
+# }
 
 variable "aws_region" {
   description = "The AWS region to be used"
@@ -114,7 +114,7 @@ variable "consul_enabled" {
 
 variable "consul_version" {
   description = "i.e. 1.11.2 or 1.11.2+ent nowadays +ent-1 'apt-cache show consul-enterprise'"
-  default     = "1.13.3"
+  default     = "1.13.3-1"
 }
 
 variable "consul_lic" {
