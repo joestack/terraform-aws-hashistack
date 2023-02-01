@@ -1,5 +1,17 @@
 //GLOBAL CLUSTER SETTINGS
 
+variable "vault_username" {
+  description = "Username to checkout AWS Provider credentials from Vault"
+}
+
+variable "vault_password" {
+  description = "Password to checkout credentials"
+}
+
+variable "namespace" {
+  default = "admin"
+}
+
 variable "aws_region" {
   description = "The AWS region to be used"
 }

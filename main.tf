@@ -1,7 +1,27 @@
 // provider and provider related or globally used data sources
+
+provider "vault" {
+  address   = data.terraform_remote_state.vault-cluster.outputs.vault_public_url
+  auth_login_userpass {
+    username = var.vault_username
+    password = var.vault_password
+    namespace = var.namespace
+  }
+}
+
 provider "aws" {
   region = var.aws_region
+  access_key = data.vault_aws_access_credentials.creds.access_key
+  secret_key = data.vault_aws_access_credentials.creds.secret_key
+
+  default_tags {
+    environment = var.name
+    owner       = joestack
+  }
 }
+
+
+
 resource "aws_key_pair" "aws-hashistack-key" {
   count      = var.key_name != "aws-hashistack-key" ? 0 : 1
   key_name   = "aws-hashistack-key"
