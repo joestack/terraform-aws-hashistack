@@ -22,7 +22,7 @@ variable "name" {
 
 variable "server_count" {
   description = "Amount of cluster instances (odd number 1,3, max 5)"
-  default     = "3"
+  #default     = "3"
 }
 
 variable "instance_type" {
@@ -49,7 +49,7 @@ variable "dns_domain" {
 
 variable "key_name" {
   description = "SSH key name to be used to access any instances. Use the one that already exist in your AWS region or keep the default and assign the pub key to aws_hashistack_key variable"
-  default     = "aws-hashistack-key"
+  #default     = "aws-hashistack-key"
 }
 
 variable "aws_hashistack_key" {
