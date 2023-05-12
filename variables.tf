@@ -133,6 +133,7 @@ variable "consul_tls_enabled" {
 
 variable "nomad_enabled" {
   description = "true or false"
+  default = false
 }
 
 variable "nomad_version" {
@@ -159,6 +160,7 @@ variable "region" {
 
 variable "client" {
   description = "enable nomad client option [true|false]?"
+  default = false
 }
 
 variable "client_count" {
@@ -207,6 +209,7 @@ variable "tfe_cert_provider" {
 
 variable "tfe_cert_email" {
   description = "mandatory in case of using certbot"
+  default = "joern@hashicorp.com"
 }
 
 variable "tfe_auto_install" {
